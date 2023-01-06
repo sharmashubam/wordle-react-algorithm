@@ -5,9 +5,9 @@ import KeyBoard from './components/KeyBoard';
 import Over from './components/Over';
 import { Context } from './Context';
 import { boardDefault, generateWordSet, todaysWord } from './words';
-import { AiFillSetting, AiOutlineQuestionCircle } from "react-icons/ai";
+import {  AiOutlineQuestionCircle } from "react-icons/ai";
 import Play from './components/Play';
-import Setting from './components/Setting';
+import {FaAffiliatetheme} from 'react-icons/fa'
 
 function App() {
   const [board, setBoard] = useState(boardDefault)
@@ -66,12 +66,6 @@ function App() {
 
   const playHandler = () => {
     setPlay(true);
-    setSetting(false)
-  }
-
-  const settingHandler = () => {
-    setSetting(true);
-    setPlay(false)
   }
 
   return (
@@ -85,13 +79,13 @@ function App() {
           </div>
           <p className='text-2xl font-bold text-center'>WORDLE</p>
           <div>
-            <AiFillSetting className='hover:cursor-pointer' size={25} onClick={settingHandler} />
+            <FaAffiliatetheme className='hover:cursor-pointer' size={25}/>
           </div>
         </nav>
 
 
 
-        {play ? <Play /> : setting ? <Setting /> :
+        {play ? <Play /> :
           <div className='game'>
             <Board />
             {gameOver.gameOver ? <Over /> : <KeyBoard />}
