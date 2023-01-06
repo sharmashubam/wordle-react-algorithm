@@ -8,6 +8,7 @@
   width: 100vw;
   height: 100vh;
   /* display: flex; */
+  /* border:1px solid white; */
   color: white;
 }
 
@@ -20,16 +21,14 @@ nav {
   height: 60px;
   width: 100%;
   margin: 0;
-  border-bottom: 1px solid grey;
-  display: grid;
-  place-items: center;
+ 
 }
 
 nav h1 {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   color: white;
-  font-size: 45px;
+  /* font-size: 45px; */
 }
 .game {
   width: 100vw;
@@ -124,8 +123,129 @@ nav h1 {
 }
 
 #big {
-  width: 100px;
+  width: fit-content;
+  padding: 0 12px;
 }
 #disabled {
   background-color: #3a393c;
+}
+
+@media only screen and (max-width: 600px) {
+  
+
+  nav h1 {
+    font-size: 30px;
+  }
+  
+  .game {
+    width: 100%;
+    height: calc(100% - 130px);
+  }
+
+  .board {
+    width: 90%;
+    height: 70%;
+  }
+
+  .letter {
+    flex: 33%;
+    font-size: 20px;
+  }
+ 
+  .keyboard {
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid white; */
+  }
+
+  .key {
+    width: 40px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  #big {
+    padding: 0 2px;
+    width: fit-content;
+    font-size: small;
+  }
+}
+
+/* Itab */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  
+
+  nav h1 {
+    font-size: 35px;
+  }
+
+  
+  .game {
+    width: 100%;
+    height: calc(100% - 150px);
+  }
+
+  .board {
+    width: 80%;
+    height: 60%;
+  }
+
+  .letter {
+    flex: 33%;
+    font-size: 25px;
+  }
+
+  .keyboard {
+    width: 100%;
+    height: 60%;
+  }
+
+  .key {
+    width: 45px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  #big {
+    padding:0 10px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  
+
+  nav h1 {
+    font-size: 45px;
+  }
+
+  .game {
+    width: 100%;
+    height: calc(100% - 170px);
+  }
+
+  .board {
+    width: 450px;
+    height: 550px;
+  }
+
+  .letter {
+    flex: 33%;
+    font-size: 30px;
+  }
+
+  .keyboard {
+    width: 700px;
+    height: 300px;
+  }
+
+  .key {
+    width: 50px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  #big {
+    width: fit-content;
+    padding:0px;
+  }
 }
